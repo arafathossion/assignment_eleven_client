@@ -1,0 +1,19 @@
+.singleItem img{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #000;
+}
+.singleItem .btn{
+    text-transform: capitalize;
+    border: 1px solid #000;
+    font-weight: bolder;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+.singleItem .allBtn .btn.icn{
+    display: none;
+}
+.singleItem .allBtn{
+    display: flex;
+    justify-content: space-between;
+}

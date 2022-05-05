@@ -1,0 +1,16 @@
+.carousel-item img{
+      height: 650px;
+}
+.homePage .btn{
+      text-align: center;
+      border: 1px solid #000;
+      margin: 20px auto 50px auto;
+      display: block;
+      font-weight: bolder;
+}
+.homePage .btn.hn{
+      display: none !important;
+}
+.homePage .btn.icn{
+      display: block !important;
+}
