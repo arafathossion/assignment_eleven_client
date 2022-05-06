@@ -18,8 +18,15 @@ const Header = () => {
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
-                                <Nav.Link as={NavLink} to='/inventory'>Inventory</Nav.Link>
-                                <Nav.Link as={NavLink} to='/additem'>Add Item</Nav.Link>
+                               
+                                {
+                                    user && 
+                                    <>
+                                     <Nav.Link as={NavLink} to='/inventory'>Manage inventory</Nav.Link>
+                                    <Nav.Link as={NavLink} to='/myitems'>My Items</Nav.Link>
+                                    <Nav.Link as={NavLink} to='/additem'>Add Item</Nav.Link>
+                                    </>
+                                }
                                 {
                                     user? <button className='btn' onClick={() => {
                                         signOut(auth);

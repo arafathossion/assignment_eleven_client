@@ -6,6 +6,7 @@ import Inventory from './Pages/Inventory/Inventory';
 import SingleInventory from './Pages/SingleInventory/SingleInventory';
 import AddItem from './Pages/AddItem/AddItem';
 import Login from './Pages/Login/Login';
+import MyItems from './Pages/MyItems/MyItems';
 
 function App() {
   return (
@@ -17,8 +18,9 @@ function App() {
        <Route path='/' element={<Home></Home>}></Route>
        <Route path='/home' element={<Home></Home>}></Route>
        <Route path='/inventory' element={<Inventory></Inventory>}></Route>
-       <Route path='/inventory/:id' element={<SingleInventory></SingleInventory>}></Route>
        <Route path='/additem' element={<AddItem></AddItem>}></Route>
+       <Route path='myitems' element={<MyItems></MyItems>}></Route>
+       <Route path='/inventory/:id' element={<SingleInventory></SingleInventory>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
      </Routes>
 
