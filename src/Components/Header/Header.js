@@ -13,11 +13,12 @@ const Header = () => {
             <Row>
                 <Navbar bg="light" expand="lg">
                     <Container>
-                        <Navbar.Brand as={Link} to='/home'>React-Bootstrap</Navbar.Brand>
+                        <Navbar.Brand as={Link} to='/home'>Halda Vegetable Warehouse</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
+                                <Nav.Link as={NavLink} to='/blog'>Blog</Nav.Link>
                                
                                 {
                                     user && 
@@ -30,7 +31,7 @@ const Header = () => {
                                 {
                                     user? <button className='btn' onClick={() => {
                                         signOut(auth);
-                                      }}>sing Out</button>: <Nav.Link as={NavLink} to='/login'>Sing Up / Sing In</Nav.Link>
+                                      }}>Sing Out</button>: <Nav.Link as={NavLink} to='/login'>Sing Up / Sing In</Nav.Link>
                                 }
                                 {/* <Nav.Link as={NavLink} to='/inventory'>Inventory</Nav.Link> */}
                                 
