@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login';
 import MyItems from './Pages/MyItems/MyItems';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
+import Loading from './Components/Loading/Loading';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/loading' element={<Loading></Loading>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
       </Routes>
 
