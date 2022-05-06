@@ -10,6 +10,7 @@ import MyItems from './Pages/MyItems/MyItems';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Loading from './Components/Loading/Loading';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/loading' element={<Loading></Loading>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
     </div>
