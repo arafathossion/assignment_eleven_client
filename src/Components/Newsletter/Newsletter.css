@@ -1,0 +1,59 @@
+
+.newsletter-info {
+    color: #000000;
+  }
+  .newsletter-info {
+    color: #000000;
+  }
+   .newsletter-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 36px;
+    margin: 0px;
+    color: #000000;
+  }
+  .quick_newsletter .newsletter-element .input-text {
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    display: inline-block;
+    border: none;
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+  }
+  .quick_newsletter .newsletter-element .newsletter-submit {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 21px;
+    padding: 15px 30px 15px 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: auto;
+    position: relative;
+    display: inline-block;
+    background-color: #555555;
+  }
+  .quick_newsletter .newsletter-element .newsletter-submit:hover {
+    background-color: #666565;
+  }
+  .quick_newsletter .newsletter-element .newsletter-submit i {
+    margin-right: 5px;
+  }
+  .quick_newsletter p {
+    margin-bottom: 0px;
+  }
+  @media only screen and (max-width: 767px) {
+    .newsletter-element .input-text,
+    .newsletter-element .newsletter-submit {
+      margin-top: 20px;
+    }
+  }
+  

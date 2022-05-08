@@ -1,19 +1,20 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { Col, Container, Row, Tab, Tabs, Form, Button } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useAuthState, useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './Login.css'
 
 const Login = () => {
+    // const [user] = useAuthState(auth);
     const [key, setKey] = useState('singIn');
     const navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
-        user,
+        users,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
@@ -27,13 +28,13 @@ const Login = () => {
 
 
 
-    const handleSingUp = (e) => {
+    const handleSingUp = async (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        createUserWithEmailAndPassword(email, password)
-        console.log(name, email, password)
+        await createUserWithEmailAndPassword(email, password)
+       
 
     }
 
@@ -41,9 +42,10 @@ const Login = () => {
 
 
 
-
-    if (user || singInUser || googlesingInuser) {
-        // navigate(from, { replace: true });
+    // const [token] = useToken(user);
+    
+    if (users || singInUser || googlesingInuser) {
+        navigate(from, { replace: true });
     }
 
 
@@ -61,11 +63,10 @@ const Login = () => {
         console.log(singInEmail, singInPassword)
         //  const url = `https://still-fjord-04706.herokuapp.com/login`;
         const { data } = await axios.post('https://still-fjord-04706.herokuapp.com/login', { singInEmail });
-        console.log(data)
-        localStorage.setItem('accessToken', data.accessToken)
+                localStorage.setItem('accessToken', data.accessToken);
         navigate(from, { replace: true });
     }
-
+   
 
 
     return (

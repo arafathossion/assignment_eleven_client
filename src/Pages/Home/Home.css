@@ -1,6 +1,9 @@
 .carousel-item img{
       height: 650px;
 }
+.homePage .card img{
+      height: 300px;
+}
 .homePage .btn{
       text-align: center;
       border: 1px solid #000;

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Card, CardGroup, Carousel, Col, Container, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import InventoryCard from '../../Components/InventoryCard/InventoryCard';
+import Newsletter from '../../Components/Newsletter/Newsletter';
 import './Home.css'
 
 const Home = () => {
@@ -34,7 +35,7 @@ const Home = () => {
                         />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <p>Raw cabbages are healthy & contain nutrients.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -46,7 +47,7 @@ const Home = () => {
 
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p>Dried dates should be avioded on renal diet.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -58,7 +59,7 @@ const Home = () => {
 
                         <Carousel.Caption>
                             <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <p>Eating raw spinach is good for relieve constipation.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
@@ -66,19 +67,62 @@ const Home = () => {
 
             <Container>
                 <Row>
+                    <h1 className='text-center py-sm-5 py-2'>Our Products</h1>
                     {
                         items?.slice(0, 6).map(item => <InventoryCard key={item._id} item={item} handleItemDetails={() => handleItemDetails(item._id)}></InventoryCard>)
                     }
+
+
                     <Col md={{ span: 4, offset: 4 }}>
                         <button className='btn' onClick={handleManageInventories}>Manage Inventories</button>
                     </Col>
+
+                    <h1 className='text-center py-sm-5 py-2'>Our Blog</h1>
+                    <CardGroup>
+                        <Card className='px-sm-3 px-0 border-0'>
+                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1526346698789-22fd84314424?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHZlZ2V0YWJsZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=600&q=60" />
+                            <Card.Body>
+                                <Card.Title>Benefits of Cayenne pepper</Card.Title>
+                                <Card.Text>
+                                    Cayenne peppers are fantastic sources of antioxidants and other plant compounds that protect our cells and promote health
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                        <Card className='px-sm-3 px-0 border-0'>
+                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1615485291234-9d694218aeb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHZlZ2V0YWJsZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=600&q=60" />
+                            <Card.Body>
+                                <Card.Title>Benefits of cauliflower</Card.Title>
+                                <Card.Text>
+                                    Cauliflower is a heart-friendly vegetable thanks to a plant compound called sulforaphane
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                        <Card className='px-sm-3 px-0 border-0'>
+                            <Card.Img variant="top" src="https://images.unsplash.com/photo-1614690738055-33507a488f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZlZ2V0YWJsZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=600&q=60" />
+                            <Card.Body>
+                                <Card.Title>Benefits of Cabbage</Card.Title>
+                                <Card.Text>
+                                    Cabbage, especially red cabbage, seems to raise levels of beta-carotene, lutein, and other heart-protective antioxidants
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <small className="text-muted">Last updated 3 mins ago</small>
+                            </Card.Footer>
+                        </Card>
+                    </CardGroup>
                 </Row>
             </Container>
 
 
 
 
-
+<Newsletter></Newsletter>
 
 
 

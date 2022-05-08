@@ -11,6 +11,7 @@ import RequireAuth from './Components/RequireAuth/RequireAuth';
 import Blog from './Pages/Blog/Blog';
 import Loading from './Components/Loading/Loading';
 import NotFound from './Pages/NotFound/NotFound';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
-
+<Footer></Footer>
     </div>
   );
 }
