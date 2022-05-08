@@ -20,7 +20,7 @@ stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160902/19067450
 * [react router 6](https://reactrouter.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Halka Vegetable warehouse Front-end Developer](https://github.com/arafathossion)
-* [Delete Any Item]
+* Delete Any Item
 
 
 ## Available Scripts
