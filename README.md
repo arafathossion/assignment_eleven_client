@@ -11,7 +11,7 @@ stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160416/19067450
 stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160902/19067450).
 
 
-### `Halka Vegetable warehouse Project Build With` 
+### `Halka Vegetable warehouse Project Build With & different features and functionality` 
 
 * [Create React App](https://github.com/facebook/create-react-app)
 * [React Bootstrap](https://react-bootstrap.github.io/)
@@ -20,6 +20,7 @@ stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160902/19067450
 * [react router 6](https://reactrouter.com/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Halka Vegetable warehouse Front-end Developer](https://github.com/arafathossion)
+* [Delete Any Item]
 
 
 ## Available Scripts
