@@ -3,8 +3,8 @@ import { Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './InventoryCard.css';
 
-const InventoryCard = ({ item, handleItemDetails }) => {
-    const { itemName, balance, quantity, name, about, picture } = item;
+const InventoryCard = ({ item, handleItemDetails,handleDeleteMyItem }) => {
+    const { itemName, balance, quantity, name, about, picture,_id } = item;
 
     const navigate = useNavigate();
     const handleAddedNewItem = () =>{
@@ -23,11 +23,11 @@ const InventoryCard = ({ item, handleItemDetails }) => {
                     <h6>Quantity : {quantity}</h6>
                     <h6>Supplier : {name}</h6>
                 </div>
-                <h6 className='text-center'>{about.slice(0, 110)}</h6>
+                <h6 className='text-center'>{about?.slice(0, 110)}</h6>
                 <div className="allBtn">
                     <button className='btn icn' onClick={() => handleItemDetails(itemName)}>stock update</button>
-                    <button className='btn hn' >delete</button>
-                    <button className='btn hn' onClick={handleAddedNewItem}>add new item</button>
+                    <button className='btn hn' onClick={() => handleDeleteMyItem(_id)} >delete</button>
+                    <button className='btn hn myitemnone' onClick={handleAddedNewItem}>add new item</button>
                 </div>
             </div>
 

@@ -8,17 +8,17 @@ const Home = () => {
     const navigate = useNavigate();
     const [items, setItems] = useState();
     useEffect(() => {
-        fetch('data.json')
+        fetch('https://still-fjord-04706.herokuapp.com/vegetableItems')
             .then(response => response.json())
             .then(data => setItems(data));
     }, []);
 
-    const handleItemDetails = (itemName) =>{
-            console.log('clicked',itemName);
-            navigate(`/inventory/:${itemName}`)
+    const handleItemDetails = (_id) => {
+        console.log('clicked', _id);
+        navigate(`/inventory/${_id}`)
     }
 
-    const handleManageInventories = () =>{
+    const handleManageInventories = () => {
         navigate(`/inventory`)
     }
 
@@ -64,16 +64,16 @@ const Home = () => {
                 </Carousel>
             </Row>
 
-           <Container>
-           <Row>
-                {
-                    items?.slice(0, 6).map(item => <InventoryCard item={item} handleItemDetails={handleItemDetails}></InventoryCard>)
-                }
-                <Col md={{span:4,offset:4}}>
-                    <button className='btn' onClick={handleManageInventories}>Manage Inventories</button>
-                </Col>
-            </Row>
-           </Container>
+            <Container>
+                <Row>
+                    {
+                        items?.slice(0, 6).map(item => <InventoryCard key={item._id} item={item} handleItemDetails={() => handleItemDetails(item._id)}></InventoryCard>)
+                    }
+                    <Col md={{ span: 4, offset: 4 }}>
+                        <button className='btn' onClick={handleManageInventories}>Manage Inventories</button>
+                    </Col>
+                </Row>
+            </Container>
 
 
 

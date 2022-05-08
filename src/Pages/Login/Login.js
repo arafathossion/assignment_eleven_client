@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { Col, Container, Row, Tab, Tabs, Form, Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -15,24 +16,25 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-      const [
+    const [
         signInWithEmailAndPassword,
         singInUser,
         singInLoading,
         singInError,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
 
 
-    const handleSingUp = (e) =>{
-         e.preventDefault();
-         const name = e.target.name.value;
-         const email = e.target.email.value;
-         const password = e.target.password.value;
-         createUserWithEmailAndPassword( email, password)
-         console.log(name,email,password)
+    const handleSingUp = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        createUserWithEmailAndPassword(email, password)
+        console.log(name, email, password)
+
     }
 
     const [signInWithGoogle, googlesingInuser, googlesingInloading, googlesingInerror] = useSignInWithGoogle(auth);
@@ -40,23 +42,28 @@ const Login = () => {
 
 
 
-    if(user || singInUser || googlesingInuser){
-        navigate(from, { replace: true });
+    if (user || singInUser || googlesingInuser) {
+        // navigate(from, { replace: true });
     }
 
 
-    if(googlesingInerror){
+    if (googlesingInerror) {
         console.log(googlesingInerror?.message)
     }
 
 
 
-    const handleSingIn = (e) =>{
-         e.preventDefault();
-         const singInEmail = e.target.email.value;
-         const singInPassword = e.target.password.value;
-         signInWithEmailAndPassword(singInEmail, singInPassword)
-         console.log(singInEmail,singInPassword)
+    const handleSingIn = async (e) => {
+        e.preventDefault();
+        const singInEmail = e.target.email.value;
+        const singInPassword = e.target.password.value;
+        await signInWithEmailAndPassword(singInEmail, singInPassword)
+        console.log(singInEmail, singInPassword)
+        //  const url = `https://still-fjord-04706.herokuapp.com/login`;
+        const { data } = await axios.post('https://still-fjord-04706.herokuapp.com/login', { singInEmail });
+        console.log(data)
+        localStorage.setItem('accessToken', data.accessToken)
+        navigate(from, { replace: true });
     }
 
 
