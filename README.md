@@ -1,6 +1,26 @@
-# Getting Started with Create React App
+# Halka Vegetable warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Halka Vegetable warehouse [Live Link](https://halda-fruits-warehouse.web.app/).
+
+Halka Vegetable warehouse Front-end [Source Code](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-arafathossion).
+
+Halka Vegetable warehouse Back-end [Source Code](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-arafathossion).
+
+stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160416/19067450).
+
+stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160902/19067450).
+
+
+### `Halka Vegetable warehouse Project Build With` 
+
+* [Create React App](https://github.com/facebook/create-react-app)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [Googel FireBase](https://firebase.google.com/)
+* [react firebase hooks](https://github.com/CSFrequency/react-firebase-hooks)
+* [react router 6](https://reactrouter.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Halka Vegetable warehouse Front-end Developer](https://github.com/arafathossion)
+
 
 ## Available Scripts
 
