@@ -21,6 +21,9 @@ stackoverflow Answer [Source Code](https://stackoverflow.com/a/72160902/19067450
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Halka Vegetable warehouse Front-end Developer](https://github.com/arafathossion)
 * Delete Any Item
+* Add New Item
+* See only Own Item
+* Manage Item
 
 
 ## Available Scripts
